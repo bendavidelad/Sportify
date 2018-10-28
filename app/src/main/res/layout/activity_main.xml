@@ -1,30 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
+    android:padding="0dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/baseball"
+        android:onClick="baseballNews"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:layout_marginLeft="8dp"
+        android:cropToPadding="true"
+        android:background="#0000"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/baseball" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="144dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="52dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic[15]" />
+    <ImageButton
+        android:id="@+id/basketball"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@id/baseball"
+        android:layout_alignTop="@id/baseball"
+        android:background="#0000"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/jordan" />
 
-</android.support.constraint.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/soccer"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/baseball"
+        android:background="#0000"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/messi" />
+
+    <ImageButton
+        android:id="@+id/boxing"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/basketball"
+        android:background="#0000"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/soccer"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/boxing" />
+
+    <ImageButton
+        android:id="@+id/swimming"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:layout_marginLeft="8dp"
+        android:cropToPadding="true"
+        android:layout_below="@id/soccer"
+        android:background="#0000"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/swim" />
+
+    <ImageButton
+        android:id="@+id/judo"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/boxing"
+        android:background="#0000"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_toRightOf="@id/swimming"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/judo" />
+
+    <ImageButton
+        android:id="@+id/football"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/swimming"
+        android:background="#0000"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/football" />
+
+    <ImageButton
+        android:id="@+id/handball"
+        android:layout_width="190dp"
+        android:layout_height="110dp"
+        android:layout_below="@id/judo"
+        android:background="#0000"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/football"
+        android:padding="0dp"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/handball" />
+</RelativeLayout>
