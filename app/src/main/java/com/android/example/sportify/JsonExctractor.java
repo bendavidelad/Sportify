@@ -9,7 +9,7 @@ import java.util.List;
 
 public class JsonExctractor {
 
-    private static List<ArticlesItem> parseResult(String jsonString) {
+    public static List<ArticlesItem> parseResult(String jsonString) {
         List<ArticlesItem> mListData = new ArrayList<>();
         try {
             JSONObject response = new JSONObject(jsonString);
