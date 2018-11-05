@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         allArticles = new HashMap<>();
         allArticles.put(BASEBALL, new ArrayList<ArticlesItem>());
@@ -55,44 +54,55 @@ public class MainActivity extends AppCompatActivity {
 
         AsyncHttpTask asyncHttpTask = new AsyncHttpTask();
         asyncHttpTask.execute(prefixUrl, postfixUrl);
-//        try {
-//            asyncHttpTask.get();
-//        } catch (Exception exp){
-//            System.out.println(exp.getStackTrace());
-//        }
+        try {
+            asyncHttpTask.get();
+        } catch (Exception exp){
+            System.out.println(exp.getStackTrace());
+        }
+        setContentView(R.layout.activity_main);
 
     }
 
     public void sendNewsCategory(View view) {
         Intent intent = new Intent(this, NewsActivity.class);
-        String newsCategory = "";
+        String newsArticleOne = "";
+        String newsArticleTwo = "";
         switch(view.getId()){
             case R.id.baseballButton:
-                newsCategory = allArticles.get(BASEBALL).get(0).getUrl();
+                newsArticleOne = allArticles.get(BASEBALL).get(0).getUrl();
+                newsArticleTwo = allArticles.get(BASEBALL).get(1).getUrl();
                 break;
             case R.id.basketballButton:
-                newsCategory = allArticles.get(BASKETBALL).get(0).getUrl();
+                newsArticleOne = allArticles.get(BASKETBALL).get(0).getUrl();
+                newsArticleTwo = allArticles.get(BASKETBALL).get(1).getUrl();
                 break;
             case R.id.soccerButton:
-                newsCategory = allArticles.get(SOCCER).get(0).getUrl();
+                newsArticleOne = allArticles.get(SOCCER).get(0).getUrl();
+                newsArticleTwo = allArticles.get(SOCCER).get(1).getUrl();
                 break;
             case R.id.boxingButton:
-                newsCategory = allArticles.get(BOXING).get(0).getUrl();
+                newsArticleOne = allArticles.get(BOXING).get(0).getUrl();
+                newsArticleTwo = allArticles.get(BOXING).get(1).getUrl();
                 break;
             case R.id.swimmingButton:
-                newsCategory = allArticles.get(SWIMMING).get(0).getUrl();
+                newsArticleOne = allArticles.get(SWIMMING).get(0).getUrl();
+                newsArticleTwo = allArticles.get(SWIMMING).get(1).getUrl();
                 break;
             case R.id.tennisButton:
-                newsCategory = allArticles.get(TENNIS).get(0).getUrl();
+                newsArticleOne = allArticles.get(TENNIS).get(0).getUrl();
+                newsArticleTwo = allArticles.get(TENNIS).get(1).getUrl();
                 break;
             case R.id.footballButton:
-                newsCategory = allArticles.get(FOOTBALL).get(0).getUrl();
+                newsArticleOne = allArticles.get(FOOTBALL).get(0).getUrl();
+                newsArticleTwo = allArticles.get(FOOTBALL).get(1).getUrl();
                 break;
             case R.id.judoButton:
-                newsCategory = allArticles.get(JUDO).get(0).getUrl();
+                newsArticleOne = allArticles.get(JUDO).get(0).getUrl();
+                newsArticleTwo = allArticles.get(JUDO).get(1).getUrl();
                 break;
         }
-        intent.putExtra("news", newsCategory);
+        intent.putExtra("newsArticleOne", newsArticleOne);
+        intent.putExtra("newsArticleTwo", newsArticleTwo);
         startActivity(intent);
     }
 
