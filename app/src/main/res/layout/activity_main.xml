@@ -7,125 +7,284 @@
     android:padding="0dp"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/baseballButton"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        android:onClick="sendNewsCategory"
-        app:srcCompat="@drawable/baseball_img" />
+        android:id="@+id/baseballFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
 
-    <ImageButton
-        android:id="@+id/basketballButton"
+        <ImageButton
+            android:id="@+id/baseballButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:maxWidth="197dp"
+            android:maxHeight="197dp"
+            android:scaleType="fitCenter"
+            android:onClick="sendNewsCategory"
+            app:srcCompat="@drawable/baseball_img" />
+
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Baseball"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="230dp"
-        android:layout_marginStart="230dp"
-        android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        android:layout_marginTop="30dp"
-        android:background="@android:color/transparent"
-        android:onClick="sendNewsCategory"
-        app:srcCompat="@drawable/basketball_img"
-         />
+        android:id="@+id/basketballFrame"
+        android:layout_toRightOf="@id/baseballFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
+
+        <ImageButton
+            android:id="@+id/basketballButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxWidth="197dp"
+            android:maxHeight="197dp"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent"
+            android:onClick="sendNewsCategory"
+            app:srcCompat="@drawable/basketball_img" />
+
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Basketball"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tennisFrame"
+        android:layout_below="@id/basketballFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/boxingFrame"
+        android:layout_marginTop="2dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
 
     <ImageButton
         android:id="@+id/tennisButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="230dp"
-        android:layout_marginStart="230dp"
-        android:layout_marginTop="160dp"
         android:adjustViewBounds="true"
-        android:maxWidth="150dp"
-        android:maxHeight="180dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp"
         android:scaleType="fitCenter"
         android:background="@android:color/transparent"
         android:onClick="sendNewsCategory"
         app:srcCompat="@drawable/tennis_img"
          />
 
-    <ImageButton
-        android:id="@+id/boxingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="160dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        android:onClick="sendNewsCategory"
-        app:srcCompat="@drawable/boxing_img" />
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Tennis"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
 
-    <ImageButton
-        android:id="@+id/swimmingButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="290dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        android:onClick="sendNewsCategory"
-        app:srcCompat="@drawable/swimming_img" />
 
-    <ImageButton
-        android:id="@+id/soccerButton"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="290dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        android:onClick="sendNewsCategory"
-        app:srcCompat="@drawable/soccer_img" />
+        android:id="@+id/boxingFrame"
+        android:layout_below="@id/baseballFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
 
-    <ImageButton
-        android:id="@+id/footballButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginLeft="230dp"
-        android:layout_marginTop="420dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        android:onClick="sendNewsCategory"
-        app:srcCompat="@drawable/football_img" />
+        <ImageButton
+            android:id="@+id/boxingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:maxWidth="197dp"
+            android:maxHeight="197dp"
+            android:scaleType="fitCenter"
+            android:onClick="sendNewsCategory"
+            app:srcCompat="@drawable/boxing_img" />
 
-    <ImageButton
-        android:id="@+id/judoButton"
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Boxing"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="420dp"
-        android:adjustViewBounds="true"
-        android:background="@android:color/transparent"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
-        android:scaleType="fitCenter"
-        android:onClick="sendNewsCategory"
-        app:srcCompat="@drawable/judo_img" />
+        android:id="@+id/swimmingFrame"
+        android:layout_below="@id/boxingFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
+
+        <ImageButton
+            android:id="@+id/swimmingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:maxWidth="197dp"
+            android:maxHeight="197dp"
+            android:scaleType="fitCenter"
+            android:onClick="sendNewsCategory"
+            app:srcCompat="@drawable/swimming_img" />
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Swimming"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/soccerFrame"
+        android:layout_below="@id/tennisFrame"
+        android:layout_toRightOf="@id/swimmingFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
+
+        <ImageButton
+            android:id="@+id/soccerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:maxWidth="197dp"
+            android:maxHeight="197dp"
+            android:scaleType="fitCenter"
+            android:onClick="sendNewsCategory"
+            app:srcCompat="@drawable/soccer_img" />
+
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Soccer"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/footballFrame"
+        android:layout_below="@id/soccerFrame"
+        android:layout_toRightOf="@id/judoFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
+
+        <ImageButton
+            android:id="@+id/footballButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:maxWidth="197dp"
+            android:maxHeight="197dp"
+            android:scaleType="fitCenter"
+            android:onClick="sendNewsCategory"
+            app:srcCompat="@drawable/football_img" />
+
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Football"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/judoFrame"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_below="@id/swimmingFrame"
+        android:maxWidth="197dp"
+        android:maxHeight="197dp">
+
+        <ImageButton
+            android:id="@+id/judoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:maxWidth="197dp"
+            android:maxHeight="197dp"
+            android:scaleType="fitCenter"
+            android:onClick="sendNewsCategory"
+            app:srcCompat="@drawable/judo_img" />
+
+        <TextView
+            android:layout_width="197dp"
+            android:layout_height="149dp"
+            android:background="@drawable/my_gradient"
+            android:text="Judo"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:textSize="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+
 </RelativeLayout>
