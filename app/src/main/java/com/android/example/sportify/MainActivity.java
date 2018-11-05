@@ -22,16 +22,15 @@ public class MainActivity extends AppCompatActivity {
 
     private String prefixUrl;
     private String postfixUrl;
-    private List<ArticlesItem> articles;
     private Map<String, List<ArticlesItem>> allArticles;
-    private final String BASEBALL = "baseball";
-    private final String BASKETBALL = "basketball";
-    private final String FOOTBALL = "football";
-    private final String SOCCER = "soccer";
-    private final String SWIMMING = "swimming";
-    private final String JUDO = "judo";
-    private final String BOXING = "boxing";
-    private final String TENNIS = "tennis";
+    private final String BASEBALL = "everything?sources=the-new-york-times&q=baseball";
+    private final String BASKETBALL = "everything?sources=espn&q=basketball";
+    private final String FOOTBALL = "everything?q=football";
+    private final String SOCCER = "everything?sources=bbc-sport&q=soccer";
+    private final String SWIMMING = "everything?sources=fox-sports&q=swimming";
+    private final String JUDO = "everything?sources=the-jerusalem-post&q=judo";
+    private final String BOXING = "everything?sources=bleacher-report&q=boxing";
+    private final String TENNIS = "everything?q=tennis";
 
 
     @Override
@@ -49,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         allArticles.put(TENNIS, new ArrayList<ArticlesItem>());
 
 
-        prefixUrl = "https://newsapi.org/v2/everything?q=";
+        prefixUrl = "https://newsapi.org/v2/";
         postfixUrl = "&apiKey=74c30136f8a043699c626830c267dc87";
 
         AsyncHttpTask asyncHttpTask = new AsyncHttpTask();
