@@ -3,6 +3,7 @@ package com.android.example.sportify;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.webkit.WebView;
 import android.widget.TextView;
 
 public class NewsActivity extends AppCompatActivity {
@@ -11,9 +12,10 @@ public class NewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Intent intent = getIntent();
-        String title = intent.getStringExtra("title");
+        String news = intent.getStringExtra("news");
         setContentView(R.layout.activity_news);
-        TextView textView = findViewById(R.id.newsTitle);
-        textView.setText(title);
+        WebView myWebView = findViewById(R.id.news);
+        myWebView.loadUrl(news);
+
     }
 }

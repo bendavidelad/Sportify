@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context="com.android.example.sportify.NewsActivity">
 
-    <TextView
-        android:id="@+id/newsTitle"
+    <WebView
+        android:id="@+id/news"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="News"

@@ -68,31 +68,31 @@ public class MainActivity extends AppCompatActivity {
         String newsCategory = "";
         switch(view.getId()){
             case R.id.baseballButton:
-                newsCategory = allArticles.get(BASEBALL).get(0).getTitle();
+                newsCategory = allArticles.get(BASEBALL).get(0).getUrl();
                 break;
             case R.id.basketballButton:
-                newsCategory = allArticles.get(BASKETBALL).get(0).getTitle();
+                newsCategory = allArticles.get(BASKETBALL).get(0).getUrl();
                 break;
             case R.id.soccerButton:
-                newsCategory = allArticles.get(SOCCER).get(0).getTitle();
+                newsCategory = allArticles.get(SOCCER).get(0).getUrl();
                 break;
             case R.id.boxingButton:
-                newsCategory = allArticles.get(BOXING).get(0).getTitle();
+                newsCategory = allArticles.get(BOXING).get(0).getUrl();
                 break;
             case R.id.swimmingButton:
-                newsCategory = allArticles.get(SWIMMING).get(0).getTitle();
+                newsCategory = allArticles.get(SWIMMING).get(0).getUrl();
                 break;
             case R.id.tennisButton:
-                newsCategory = allArticles.get(TENNIS).get(0).getTitle();
+                newsCategory = allArticles.get(TENNIS).get(0).getUrl();
                 break;
             case R.id.footballButton:
-                newsCategory = allArticles.get(FOOTBALL).get(0).getTitle();
+                newsCategory = allArticles.get(FOOTBALL).get(0).getUrl();
                 break;
             case R.id.judoButton:
-                newsCategory = allArticles.get(JUDO).get(0).getTitle();
+                newsCategory = allArticles.get(JUDO).get(0).getUrl();
                 break;
         }
-        intent.putExtra("title", newsCategory);
+        intent.putExtra("news", newsCategory);
         startActivity(intent);
     }
 
