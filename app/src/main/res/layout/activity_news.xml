@@ -1,50 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.android.example.sportify.NewsActivity">
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/card_view_2"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/articleViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_gravity="center"
-        card_view:cardCornerRadius="4dp">
-
-        <WebView
-            android:id="@+id/newsArticleTwo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="News"
-            android:textSize="30dp"
-            tools:layout_editor_absoluteX="103dp"
-            tools:layout_editor_absoluteY="61dp" />
-
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view_1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_gravity="center"
-        app:cardCornerRadius="4dp">
-
-        <WebView
-            android:id="@+id/newsArticleOne"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="News"
-            android:textSize="30dp"
-            tools:layout_editor_absoluteX="103dp"
-            tools:layout_editor_absoluteY="61dp" />
-    </android.support.v7.widget.CardView>
+        android:layout_height="match_parent">
+    </android.support.v4.view.ViewPager>
 
 </RelativeLayout>

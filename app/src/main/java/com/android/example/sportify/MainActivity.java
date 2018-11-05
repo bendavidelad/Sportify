@@ -66,42 +66,40 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NewsActivity.class);
         String newsArticleOne = "";
         String newsArticleTwo = "";
-        switch(view.getId()){
-            case R.id.baseballButton:
-                newsArticleOne = allArticles.get(BASEBALL).get(0).getUrl();
-                newsArticleTwo = allArticles.get(BASEBALL).get(1).getUrl();
-                break;
-            case R.id.basketballButton:
-                newsArticleOne = allArticles.get(BASKETBALL).get(0).getUrl();
-                newsArticleTwo = allArticles.get(BASKETBALL).get(1).getUrl();
-                break;
-            case R.id.soccerButton:
-                newsArticleOne = allArticles.get(SOCCER).get(0).getUrl();
-                newsArticleTwo = allArticles.get(SOCCER).get(1).getUrl();
-                break;
-            case R.id.boxingButton:
-                newsArticleOne = allArticles.get(BOXING).get(0).getUrl();
-                newsArticleTwo = allArticles.get(BOXING).get(1).getUrl();
-                break;
-            case R.id.swimmingButton:
-                newsArticleOne = allArticles.get(SWIMMING).get(0).getUrl();
-                newsArticleTwo = allArticles.get(SWIMMING).get(1).getUrl();
-                break;
-            case R.id.tennisButton:
-                newsArticleOne = allArticles.get(TENNIS).get(0).getUrl();
-                newsArticleTwo = allArticles.get(TENNIS).get(1).getUrl();
-                break;
-            case R.id.footballButton:
-                newsArticleOne = allArticles.get(FOOTBALL).get(0).getUrl();
-                newsArticleTwo = allArticles.get(FOOTBALL).get(1).getUrl();
-                break;
-            case R.id.judoButton:
-                newsArticleOne = allArticles.get(JUDO).get(0).getUrl();
-                newsArticleTwo = allArticles.get(JUDO).get(1).getUrl();
-                break;
-        }
-        intent.putExtra("newsArticleOne", newsArticleOne);
-        intent.putExtra("newsArticleTwo", newsArticleTwo);
+//        switch(view.getId()){
+//            case R.id.baseballButton:
+//                newsArticleOne = allArticles.get(BASEBALL).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(BASEBALL).get(1).getUrl();
+//                break;
+//            case R.id.basketballButton:
+//                newsArticleOne = allArticles.get(BASKETBALL).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(BASKETBALL).get(1).getUrl();
+//                break;
+//            case R.id.soccerButton:
+//                newsArticleOne = allArticles.get(SOCCER).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(SOCCER).get(1).getUrl();
+//                break;
+//            case R.id.boxingButton:
+//                newsArticleOne = allArticles.get(BOXING).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(BOXING).get(1).getUrl();
+//                break;
+//            case R.id.swimmingButton:
+//                newsArticleOne = allArticles.get(SWIMMING).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(SWIMMING).get(1).getUrl();
+//                break;
+//            case R.id.tennisButton:
+//                newsArticleOne = allArticles.get(TENNIS).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(TENNIS).get(1).getUrl();
+//                break;
+//            case R.id.footballButton:
+//                newsArticleOne = allArticles.get(FOOTBALL).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(FOOTBALL).get(1).getUrl();
+//                break;
+//            case R.id.judoButton:
+//                newsArticleOne = allArticles.get(JUDO).get(0).getUrl();
+//                newsArticleTwo = allArticles.get(JUDO).get(1).getUrl();
+//                break;
+//        }
         startActivity(intent);
     }
 
