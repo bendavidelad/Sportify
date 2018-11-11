@@ -5,17 +5,17 @@ package com.android.example.sportify;
  */
 
 public class ArticlesItem {
-        private String image;
-        private String title;
-        private String description;
-        private  String url;
+        private java.lang.String image;
+        private java.lang.String title;
+        private java.lang.String description;
+        private java.lang.String url;
 
 
         public ArticlesItem() {
             super();
         }
 
-        public String getImage() {
+        public java.lang.String getImage() {
             return image;
         }
 
@@ -23,7 +23,7 @@ public class ArticlesItem {
             this.image = image;
         }
 
-        public String getTitle() {
+        public java.lang.String getTitle() {
             return title;
         }
 
@@ -31,7 +31,7 @@ public class ArticlesItem {
             this.title = title;
         }
 
-        public String getDescription() {
+        public java.lang.String getDescription() {
             return description;
         }
 
@@ -39,7 +39,7 @@ public class ArticlesItem {
             this.description = description;
         }
 
-        public String getUrl() { return url; }
+        public java.lang.String getUrl() { return url; }
 
         public void setUrl(String url) { this.url = url; }
 

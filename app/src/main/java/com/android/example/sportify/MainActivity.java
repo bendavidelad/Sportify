@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String prefixUrl;
     private String postfixUrl;
-    private Map<String, List<ArticlesItem>> allArticles;
+    private Map<String, ArrayList<ArticlesItem>> allArticles;
     private final String BASEBALL = "everything?sources=the-new-york-times&q=baseball";
     private final String BASKETBALL = "everything?sources=espn&q=basketball";
     private final String FOOTBALL = "everything?q=football";
@@ -64,44 +64,41 @@ public class MainActivity extends AppCompatActivity {
 
     public void sendNewsCategory(View view) {
         Intent intent = new Intent(this, NewsActivity.class);
-        String newsArticleOne = "";
-        String newsArticleTwo = "";
+        ArrayList<ArticlesItem> articleItems = new ArrayList<ArticlesItem>();
         switch(view.getId()){
             case R.id.baseballButton:
-                newsArticleOne = allArticles.get(BASEBALL).get(0).getUrl();
-                newsArticleTwo = allArticles.get(BASEBALL).get(1).getUrl();
+                articleItems = allArticles.get(BASEBALL);
                 break;
             case R.id.basketballButton:
-                newsArticleOne = allArticles.get(BASKETBALL).get(0).getUrl();
-                newsArticleTwo = allArticles.get(BASKETBALL).get(1).getUrl();
+                articleItems = allArticles.get(BASKETBALL);
                 break;
             case R.id.soccerButton:
-                newsArticleOne = allArticles.get(SOCCER).get(0).getUrl();
-                newsArticleTwo = allArticles.get(SOCCER).get(1).getUrl();
+                articleItems = allArticles.get(SOCCER);
                 break;
             case R.id.boxingButton:
-                newsArticleOne = allArticles.get(BOXING).get(0).getUrl();
-                newsArticleTwo = allArticles.get(BOXING).get(1).getUrl();
+                articleItems = allArticles.get(BOXING);
                 break;
             case R.id.swimmingButton:
-                newsArticleOne = allArticles.get(SWIMMING).get(0).getUrl();
-                newsArticleTwo = allArticles.get(SWIMMING).get(1).getUrl();
+                articleItems = allArticles.get(SWIMMING);
                 break;
             case R.id.tennisButton:
-                newsArticleOne = allArticles.get(TENNIS).get(0).getUrl();
-                newsArticleTwo = allArticles.get(TENNIS).get(1).getUrl();
+                articleItems = allArticles.get(TENNIS);
                 break;
             case R.id.footballButton:
-                newsArticleOne = allArticles.get(FOOTBALL).get(0).getUrl();
-                newsArticleTwo = allArticles.get(FOOTBALL).get(1).getUrl();
+                articleItems = allArticles.get(FOOTBALL);
                 break;
             case R.id.judoButton:
-                newsArticleOne = allArticles.get(JUDO).get(0).getUrl();
-                newsArticleTwo = allArticles.get(JUDO).get(1).getUrl();
+                articleItems = allArticles.get(JUDO);
                 break;
         }
-        intent.putExtra("newsArticleOne", newsArticleOne);
-        intent.putExtra("newsArticleTwo", newsArticleTwo);
+
+        // Send array of urls only in Intent
+        ArrayList<String> urlsToSend = new ArrayList<String>();
+        for (ArticlesItem article : articleItems) {
+            urlsToSend.add(article.getUrl());
+        }
+
+        intent.putStringArrayListExtra("urlsList", urlsToSend);
         startActivity(intent);
     }
 
