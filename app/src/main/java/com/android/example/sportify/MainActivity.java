@@ -51,10 +51,10 @@ public class MainActivity extends AppCompatActivity {
         prefixUrl = "https://newsapi.org/v2/";
         postfixUrl = "&apiKey=74c30136f8a043699c626830c267dc87";
 
-        AsyncHttpTask asyncHttpTask = new AsyncHttpTask();
-        asyncHttpTask.execute(prefixUrl, postfixUrl);
+        AsyncHttpTask asyncGetArticles = new AsyncHttpTask();
+        asyncGetArticles.execute(prefixUrl, postfixUrl);
         try {
-            asyncHttpTask.get();
+            asyncGetArticles.get();
         } catch (Exception exp){
             System.out.println(exp.getStackTrace());
         }
@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendNewsCategory(View view) {
-        Intent intent = new Intent(this, NewsActivity.class);
+        Intent newsPage = new Intent(this, NewsActivity.class);
         ArrayList<ArticlesItem> articleItems = new ArrayList<ArticlesItem>();
         switch(view.getId()){
             case R.id.baseballButton:
@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
             urlsToSend.add(article.getUrl());
         }
 
-        intent.putStringArrayListExtra("urlsList", urlsToSend);
-        startActivity(intent);
+        newsPage.putStringArrayListExtra(getString(R.string.urlsListKey), urlsToSend);
+        startActivity(newsPage);
     }
 
     public class AsyncHttpTask extends AsyncTask<String, Void, String> {

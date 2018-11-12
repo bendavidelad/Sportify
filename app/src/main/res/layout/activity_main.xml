@@ -26,15 +26,16 @@
             android:maxHeight="197dp"
             android:scaleType="fitCenter"
             android:onClick="sendNewsCategory"
-            app:srcCompat="@drawable/baseball_img" />
+            app:srcCompat="@drawable/baseball_img"
+            android:contentDescription="@string/baseball_image" />
 
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Baseball"
+            android:text="@string/baseball_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>
@@ -59,15 +60,16 @@
             android:scaleType="fitCenter"
             android:background="@android:color/transparent"
             android:onClick="sendNewsCategory"
-            app:srcCompat="@drawable/basketball_img" />
+            app:srcCompat="@drawable/basketball_img"
+            android:contentDescription="@string/basketball_image" />
 
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Basketball"
+            android:text="@string/basketball_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>
@@ -95,15 +97,15 @@
         android:background="@android:color/transparent"
         android:onClick="sendNewsCategory"
         app:srcCompat="@drawable/tennis_img"
-         />
+        android:contentDescription="@string/tennis_image" />
 
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Tennis"
+            android:text="@string/tennis_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>
@@ -129,15 +131,16 @@
             android:maxHeight="197dp"
             android:scaleType="fitCenter"
             android:onClick="sendNewsCategory"
-            app:srcCompat="@drawable/boxing_img" />
+            app:srcCompat="@drawable/boxing_img"
+            android:contentDescription="@string/boxing_image" />
 
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Boxing"
+            android:text="@string/boxing_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>
@@ -163,14 +166,15 @@
             android:maxHeight="197dp"
             android:scaleType="fitCenter"
             android:onClick="sendNewsCategory"
-            app:srcCompat="@drawable/swimming_img" />
+            app:srcCompat="@drawable/swimming_img"
+            android:contentDescription="@string/swimming_image" />
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Swimming"
+            android:text="@string/swimming_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>
@@ -196,15 +200,16 @@
             android:maxHeight="197dp"
             android:scaleType="fitCenter"
             android:onClick="sendNewsCategory"
-            app:srcCompat="@drawable/soccer_img" />
+            app:srcCompat="@drawable/soccer_img"
+            android:contentDescription="@string/soccer_image" />
 
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Soccer"
+            android:text="@string/soccer_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>
@@ -231,15 +236,16 @@
             android:maxHeight="197dp"
             android:scaleType="fitCenter"
             android:onClick="sendNewsCategory"
-            app:srcCompat="@drawable/football_img" />
+            app:srcCompat="@drawable/football_img"
+            android:contentDescription="@string/football_image" />
 
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Football"
+            android:text="@string/football_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>
@@ -265,15 +271,16 @@
             android:maxHeight="197dp"
             android:scaleType="fitCenter"
             android:onClick="sendNewsCategory"
-            app:srcCompat="@drawable/judo_img" />
+            app:srcCompat="@drawable/judo_img"
+            android:contentDescription="@string/judo_image" />
 
         <TextView
             android:layout_width="197dp"
             android:layout_height="149dp"
-            android:text="Judo"
+            android:text="@string/judo_image"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
     </FrameLayout>

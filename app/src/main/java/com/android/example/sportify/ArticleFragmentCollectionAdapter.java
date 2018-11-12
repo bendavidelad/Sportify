@@ -26,9 +26,9 @@ public class ArticleFragmentCollectionAdapter extends FragmentStatePagerAdapter 
     public Fragment getItem(int index) {
 
         ArticleFragment articleFragment = new ArticleFragment();
-        Bundle bundle = new Bundle();
-        bundle.putString("articleUrl",  this.articles.get(index));
-        articleFragment.setArguments(bundle);
+        Bundle currentUrl = new Bundle();
+        currentUrl.putString("articleUrl",  this.articles.get(index));
+        articleFragment.setArguments(currentUrl);
         return articleFragment;
     }
 

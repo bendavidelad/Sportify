@@ -10,7 +10,7 @@ import java.util.List;
 public class JsonExctractor {
 
     public static ArrayList<ArticlesItem> parseResult(java.lang.String jsonString) {
-        ArrayList<ArticlesItem> mListData = new ArrayList<>();
+        ArrayList<ArticlesItem> articleItems = new ArrayList<>();
         try {
             JSONObject response = new JSONObject(jsonString);
             JSONArray posts = response.optJSONArray("articles");
@@ -27,11 +27,11 @@ public class JsonExctractor {
                 item.setUrl(url);
                 item.setDescription(description);
 
-                mListData.add(item);
+                articleItems.add(item);
             }
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        return mListData;
+        return articleItems;
     }
 }
