@@ -25,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
     private Map<String, ArrayList<ArticlesItem>> allArticles;
     private final String BASEBALL = "everything?sources=the-new-york-times&q=baseball";
     private final String BASKETBALL = "everything?sources=espn&q=basketball";
-    private final String FOOTBALL = "everything?q=football";
+    private final String FOOTBALL = "everything?sources=the-new-york-times&q=football";
     private final String SOCCER = "everything?sources=bbc-sport&q=soccer";
     private final String SWIMMING = "everything?sources=fox-sports&q=swimming";
     private final String JUDO = "everything?sources=the-jerusalem-post&q=judo";
     private final String BOXING = "everything?sources=bleacher-report&q=boxing";
-    private final String TENNIS = "everything?q=tennis";
+    private final String TENNIS = "everything?sources=bbc-sport&q=tennis";
 
 
     @Override

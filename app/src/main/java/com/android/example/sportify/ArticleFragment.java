@@ -19,27 +19,24 @@ public class ArticleFragment extends Fragment {
 
     private WebView webView;
 
-
-
     public ArticleFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view =  inflater.inflate(R.layout.fragment_article, container, false);
-        webView = view.findViewById(R.id.webDisplay);
+        View articleFragment =  inflater.inflate(R.layout.fragment_article, container, false);
+        webView = articleFragment.findViewById(R.id.webDisplay);
 
         // Get Urls list from NewsActivity
-        String articleUrl = getArguments().getString("articleUrl");
+        String articleUrl = getArguments().getString(getString(R.string.articleUrlKey));
 
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl(articleUrl);
 
-        return view;
+        return articleFragment;
     }
 
 }
